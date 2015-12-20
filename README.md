@@ -27,6 +27,6 @@
 
 效果如下:
 
-![条形码与二维码](https://github.com/chenchunyong/react-native-barCode/raw/master/barCode.png)
+![条形码与二维码](https://github.com/chenchunyong/react-native-barCode/raw/master/barCode.png =375x669)
 
 
