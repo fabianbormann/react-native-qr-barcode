@@ -15,6 +15,7 @@
 # Usage
 
 ```
+import {BarCode,QRCode} from 'react-native-barcode-qrcode'
 <BarCode    value={this.props.payCode}
             width="225"
             height="90"
