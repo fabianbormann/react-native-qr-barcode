@@ -4,10 +4,6 @@
 
 实现的原理:在`WebView`组件下,用`canvas`组件画出BarCode、QRCode。
 
-效果如下:
-
-![条形码与二维码](https://github.com/chenchunyong/react-native-barCode/raw/master/barCode.png)
-
 # Install
  
  安装包:
@@ -28,5 +24,9 @@
             bgColor="#fff"
             fgColor="#333"/>
 ```
+
+效果如下:
+
+![条形码与二维码](https://github.com/chenchunyong/react-native-barCode/raw/master/barCode.png)
 
 
