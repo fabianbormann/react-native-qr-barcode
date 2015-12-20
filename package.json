@@ -1,0 +1,29 @@
+{
+  "name": "react-native-barcode",
+  "version": "1.0.0",
+  "description": "采用React Native WebView组件实现的BarCode（条形码）、二维码",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenchunyong/react-native-barCode.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "webView",
+    "barcode",
+    "qrcode"
+  ],
+  "author": "陈春勇",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chenchunyong/react-native-barCode/issues"
+  },
+  "homepage": "https://github.com/chenchunyong/react-native-barCode#readme",
+  "dependencies": {
+    "qr.js": "0.0.0"
+  }
+}
