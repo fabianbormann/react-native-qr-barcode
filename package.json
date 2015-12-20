@@ -1,5 +1,5 @@
 {
-  "name": "react-native-barcode",
+  "name": "react-native-barcode-qrcode",
   "version": "1.0.0",
   "description": "采用React Native WebView组件实现的BarCode（条形码）、二维码",
   "main": "index.js",
