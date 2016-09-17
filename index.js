@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { View, WebView, Text }  from 'react-native';
 import qr from 'qr.js';
 
-export default class BarCode extends Component {
+export class BarCode extends Component {
     render() {
       return (
         <View style={{width:this.props.width,height:this.props.height}}>
@@ -66,7 +66,7 @@ BarCode.defaultProps = {
   height: 90
 }
 
-export default class QRCode extends Component {
+export class QRCode extends Component {
     utf16to8 = str => {
       let out, i, len, c;
       out = '';
