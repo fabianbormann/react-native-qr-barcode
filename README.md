@@ -9,7 +9,7 @@ Based on [chenchunyong/react-native-barCode](https://github.com/chenchunyong/rea
 # Usage
 
 ```javascript
-import {BarCode,QRCode} from 'react-native-bar-qr-code'
+import {BarCode,QRCode} from 'react-native-qr-barcode'
     
     /**
      * value: Encrypted barcode text (default: '12345678901234567890')

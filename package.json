@@ -1,11 +1,11 @@
 {
   "name": "react-native-qr-barcode",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "React Native WebView component of BarCode and QRCode",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fabianbormann/react-native-bar-qrcode.git"
+    "url": "git+https://github.com/fabianbormann/react-native-qr-barcode.git"
   },
   "keywords": [
     "react",
@@ -17,9 +17,9 @@
   "author": "陈春勇, fabianbormann",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fabianbormann/react-native-bar-qrcode/issues"
+    "url": "https://github.com/fabianbormann/react-native-qr-barcode/issues"
   },
-  "homepage": "https://github.com/fabianbormann/react-native-bar-qrcode/blob/master/README.md",
+  "homepage": "https://github.com/fabianbormann/react-native-qr-barcode/blob/master/README.md",
   "dependencies": {
     "qr.js": "0.0.0"
   }

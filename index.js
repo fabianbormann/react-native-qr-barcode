@@ -55,7 +55,7 @@ export default class BarCode extends Component {
 BarCode.propTypes = {
   value: PropTypes.string,
   bgColor: PropTypes.string,
-  width: PropTypes.number
+  width: PropTypes.number,
   height: PropTypes.number
 }
 
