@@ -1,5 +1,5 @@
 'use strict';
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { View, WebView, Text }  from 'react-native';
 import qr from 'qr.js';
 
@@ -7,7 +7,7 @@ export class BarCode extends Component {
     render() {
       return (
         <View style={{width:this.props.width,height:this.props.height}}>
-          <WebView html={this._getHtml()}/>
+          <WebView source={{html: this._getHtml()}}/>
         </View>
       )
     }
@@ -88,11 +88,36 @@ export class QRCode extends Component {
     }
 
     render() {
+      console.log(this._getHtml())
       return (
         <View style={{height: this.props.size, width: this.props.size}}>
-          <WebView html={this._getHtml()} />
+          <WebView source={{html: this._getHtml()}} />
         </View>
       );
+    }
+
+    renderCanvas(canvas) {
+      let ctx = canvas.getContext('2d');
+      let size = this.size;
+      let fgColor = this.fgColor;
+      let bgColor = this.bgColor;
+      canvas.width = size;
+      canvas.height = size;
+      canvas.style.left = (window.innerWidth - size) / 2 + 'px';
+      if (window.innerHeight > size) canvas.style.top = (window.innerHeight - size) / 2 + 'px';
+      ctx.fillStyle = 'red';
+      ctx.fillRect(0, 0, size, size);
+      let cells = this.cells;
+      let cellWidth = this.size / cells.length;
+      let cellHeight = this.size / cells.length;
+      cells.forEach(function (row, rowIndex) {
+        row.forEach(function (column, columnIndex) {
+          ctx.fillStyle = column ? bgColor : fgColor;
+          let w = Math.ceil((rowIndex + 1) * cellWidth) - Math.floor(rowIndex * cellWidth);
+          let h = Math.ceil((columnIndex + 1) * cellHeight) - Math.floor(columnIndex * cellHeight);
+          ctx.fillRect(Math.round(rowIndex * cellWidth), Math.round(columnIndex * cellHeight), w, h);
+        });
+      });
     }
 
     _getHtml = () => {
@@ -104,7 +129,7 @@ export class QRCode extends Component {
           cells: qr(value).modules,
       };
       var contextString = JSON.stringify(context);
-      var renderString = renderCanvas.toString();
+      var renderString = this.renderCanvas.toString();
       return `<!doctype html>
                   <html>
                   <head>
