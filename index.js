@@ -6,7 +6,7 @@ import qr from 'qr.js';
 export class BarCode extends Component {
     render() {
       return (
-        <View style={{width:this.props.width,height:this.props.height}}>
+        <View style={[{width:this.props.width, height:this.props.height}, this.props.style]}>
           <WebView source={{html: this._getHtml()}}/>
         </View>
       )
@@ -56,7 +56,8 @@ BarCode.propTypes = {
   value: PropTypes.string,
   bgColor: PropTypes.string,
   width: PropTypes.number,
-  height: PropTypes.number
+  height: PropTypes.number,
+  style: PropTypes.object
 }
 
 BarCode.defaultProps = {
@@ -90,7 +91,7 @@ export class QRCode extends Component {
     render() {
       console.log(this._getHtml())
       return (
-        <View style={{height: this.props.size, width: this.props.size}}>
+        <View style={[{height: this.props.size, width: this.props.size}, this.props.style]}>
           <WebView source={{html: this._getHtml()}} />
         </View>
       );
@@ -155,7 +156,8 @@ QRCode.propTypes = {
   value: PropTypes.string,
   fgColor: PropTypes.string,
   bgColor: PropTypes.string,
-  size: PropTypes.number
+  size: PropTypes.number,
+  style: PropTypes.object
 }
 
 QRCode.defaultProps = {

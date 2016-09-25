@@ -1,6 +1,6 @@
 {
   "name": "react-native-qr-barcode",
-  "version": "0.6.2",
+  "version": "0.6.4",
   "description": "React Native WebView component of BarCode and QRCode",
   "main": "index.js",
   "repository": {
