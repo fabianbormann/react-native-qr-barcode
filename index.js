@@ -1,7 +1,8 @@
 'use strict';
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { View, WebView, Text }  from 'react-native';
 import qr from 'qr.js';
+import PropTypes from 'prop-types';
 
 export class BarCode extends Component {
     render() {

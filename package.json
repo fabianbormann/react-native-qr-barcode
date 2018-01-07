@@ -22,6 +22,7 @@
   "homepage": "https://github.com/fabianbormann/react-native-qr-barcode/blob/master/README.md",
   "dependencies": {
     "jsbarcode": "^3.5.0-beta",
+    "prop-types": "^15.6.0",
     "qr.js": "0.0.0"
   }
 }
